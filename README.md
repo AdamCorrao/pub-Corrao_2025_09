@@ -18,7 +18,7 @@ Example code and datasets for "A modular framework for collaborative human-AI, m
 Three main directories are Data, Notebooks, and Scripts.
 - Data: files used for assembling a phase diagram dataset, ternary phase diagram datasets, and simulated combinatorial libraries.
 - Notebooks: example Jupyter (.ipynb) notebooks for assembling a phase diagram dataset and simulating a combinatorial library.
-- Scripts: slurm job script for running (3) different experiment campaigns using HPC resources.
+- Scripts: (3) scripts for running different experiment campaigns, and (1) slurm script (.sbatch) for running experiment campaign(s) using HPC resources.
 -----
 ## Data
 ### DRNets
@@ -39,12 +39,12 @@ Three main directories are Data, Notebooks, and Scripts.
 - Simulate combinatorial library datasets to be used in experiment campaigns.
 -----
 ## Scripts
-###
 ### AlLiFe_geoseries.py
 - Run an experiment campaign where measurements are sampled from a grid of points with evolving resolution.
 ### AlLiFe_random.py
 - Run an experiment campaign where measurements are randomly sampled from unmeasured points.
 ### AlLiFe_AIdriven.py
 - Run an experiment campaign where measurements are sampled from a cumulative distribution function calculated from the GPC uncertainty for unmeasured points combined with an on/off edge characteristic (i.e., 0 = neighboring points all have the same label, 1 = any neighboring point has a different label).
-### Slurm -> full_campaign_options.py
-- Run a slurm script (multiapproach_singlerun.sbatch)
+### Slurm scripts
+- Run a slurm script (multiapproach_singlerun.sbatch) that runs a python script (full_campaign_options.py)
+- Flags allow the user to select a dataset, total number of measurements, data from run to save, experiment approach, and a campaign name.
