@@ -59,6 +59,10 @@ png_path = simexp_path / "pngs"
 movie_path = simexp_path / "movies"
 snapshot_path = png_path / "campaign_snapshots"
 
+# Ensure output dirs exist
+for d in [fig_path, pkl_path, png_path, movie_path, snapshot_path]:
+    os.makedirs(d, exist_ok=True)
+
 # complex wafer
 complex_zipfile = 'ds_AlLiFe_complex_21Sep2024_12-04-04.zip'
 complex_file = 'ds_AlLiFe_complex_21Sep2024_12-04-04.nc'
