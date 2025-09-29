@@ -3,8 +3,10 @@ Example code and datasets for "A modular framework for collaborative human-AI, m
 -----
 # Computing requirements and pixi environment
 - Development was done using a Linux (RHEL 8.10) VM with 8 cores and 32 GB RAM.
-    - Runtime for wafer simulation is approx 1 min.
+    - Runtime for wafer simulation is approx. 1 min.
 - Experiment campaigns were run via slurm scripts on a computing cluster.
+    - Runtime for a campaign is approx. 2 hours.
+    - GP training is the bottleneck for this implementation.
 ## Getting started with pixi
 - If pixi is not yet installed, follow instructions here: https://pixi.sh/latest/installation/
 - Clone this repo
@@ -33,10 +35,15 @@ Three main directories are Data, Notebooks, and Scripts.
 ## Notebooks
 ### PhaseDiagramAssembler
 - Assemble a phase diagram dataset (Xarray dataset, netcdf4 file) from DRNets files.
-### WaferSimulator
-- Simulate a combinatorial library dataset for experiment campaigns.
+### WaferSimulator_3libraries
+- Simulate combinatorial library datasets to be used in experiment campaigns.
 ### Campaign_geoseries
--
+- Run an experiment campaign where measurements are sampled from a grid of points with evolving resolution.
 ### Campaign_random
--
+- Run an experiment campaign where measurements are randomly sampled from unmeasured points.
 ### Campaign_AIdriven
+- Run an experiment campaign where measurements are sampled from a cumulative distribution function calculated from the GPC uncertainty for unmeasured points combined with an on/off edge characteristic (i.e., 0 = neighboring points all have the same label, 1 = any neighboring point has a different label).
+-----
+## Scripts
+
+
