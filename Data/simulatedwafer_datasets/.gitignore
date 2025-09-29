@@ -1,0 +1,14 @@
+# Ignore .pkl files, checkpoints, figures, slurm outputs, and netcdf4 files that tend to be larger than 100 mb
+*.pkl
+*checkpoint.py
+*checkpoint.ipynb
+*nohup*
+*.png
+*.err
+*.out
+*.nc
+
+# pixi environment, lock file (only .toml is needed)
+.pixi
+*.lock
+*.egg-info
