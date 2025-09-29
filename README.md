@@ -6,7 +6,7 @@ Example code and datasets for "A modular framework for collaborative human-AI, m
     - Runtime for wafer simulation is approx. 1 min.
 - Experiment campaigns were run via slurm scripts on a computing cluster.
     - Runtime for a campaign is approx. 2 hours.
-    - GP training is the bottleneck for this implementation.
+    - Gaussian process training is the bottleneck for this implementation.
 ## Getting started with pixi
 - If pixi is not yet installed, follow instructions here: https://pixi.sh/latest/installation/
 - Clone this repo
@@ -26,9 +26,9 @@ Three main directories are Data, Notebooks, and Scripts.
 - 3 chemical systems available: Al-Li-Fe oxide, Bi-Cu-V oxide, and Li-Sr-Al oxide.
 - All files originate from https://github.com/gomes-lab/DRNets-Nature-Machine-Intelligence
 ### phasediagram_datasets
-- Phase diagram Xarray datasets (Xarray dataset, netcdf4 file) for the 3 chemical systems available. Compressed (.zip) files provided in place of netcdf4 (.nc) files when filesize exceeds 100 mb.
+- Phase diagram Xarray datasets (netcdf4 files) for the 3 chemical systems available. Compressed (.zip) files provided in place of netcdf4 (.nc) files when filesize exceeds 100 mb.
 ### simulatedwafer_datasets
-- Simulated Al-Li-Fe oxide combinatorial library (Xarray dataset, netcdf4 file) with element weights, crystallographic phase weights, and X-ray diffaction patterns.
+- Simulated Al-Li-Fe oxide combinatorial library (Xarray dataset, netcdf4 file) with element weights, crystallographic phase weights, and X-ray diffaction patterns. Compressed (.zip) files provided in place of netcdf4 (.nc) files when filesize exceeds 100 mb.
 ### Miscellaneous
 - gp_prediction_onalldata.csv: Al-Li-Fe oxide results from predicting class labels with a Gaussian process classifier (GPC) trained on all x,y coordinates and ground truth labels (asserted during simulation). Here, predicted_labels are used for calculating accuracy during experiment campaigns since these represent the best model possible with the current GPC kernel and hyperparameters.
 -----
