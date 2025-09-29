@@ -18,7 +18,7 @@ Example code and datasets for "A modular framework for collaborative human-AI, m
 Three main directories are Data, Notebooks, and Scripts.
 - Data: files used for assembling a phase diagram dataset, ternary phase diagram datasets, and simulated combinatorial libraries.
 - Notebooks: example Jupyter (.ipynb) notebooks for assembling a phase diagram dataset and simulating a combinatorial library.
-- Scripts: (3) scripts for running different experiment campaigns, and (1) slurm script (.sbatch) for running experiment campaign(s) using HPC resources.
+- Simulated Experiments: (3) scripts for running different experiment campaigns, and (1) slurm script (.sbatch) for running experiment campaign(s) using HPC resources.
 -----
 ## Data
 ### DRNets
@@ -38,7 +38,7 @@ Three main directories are Data, Notebooks, and Scripts.
 ### WaferSimulator_3libraries
 - Simulate combinatorial library datasets to be used in experiment campaigns.
 -----
-## Scripts
+## Simulated Experiments
 ### AlLiFe_geoseries.py
 - Run an experiment campaign where measurements are sampled from a grid of points with evolving resolution.
 ### AlLiFe_random.py
