@@ -1,5 +1,8 @@
 # pub-Corrao_2025_09
 Example code and datasets for "A modular framework for collaborative human-AI, multi-modal and multi-beamline synchrotron experiments."
+
+Preprint on arXiv: https://doi.org/10.48550/arXiv.2509.22959
+
 -----
 # Computing requirements and pixi environment
 - Development was done using a Linux (RHEL 8.10) VM with 8 cores and 32 GB RAM.
